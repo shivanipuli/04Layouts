@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="102dp"
         android:layout_height="53dp"
         android:layout_marginTop="162dp"
@@ -21,12 +23,40 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".25" />
 
+    <View
+        android:layout_width="102dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="@id/guideline3"
+        android:layout_marginLeft="@id/guideline3"
+        android:layout_marginBottom="237dp"
+        android:background="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="102dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="@id/guideline3"
+        android:layout_marginLeft="@id/guideline3"
+        android:background="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toEndOf="@id/guideline3" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:text="@string/next"
+        android:onClick="next"
         app:layout_constraintLeft_toRightOf="@id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
